@@ -17,10 +17,11 @@ class RoomFactory extends Factory
     public function definition(): array
     {
         return [
+            
             'roomDescription' =>fake()->catchPhrase(),
             'roomCapacity'=>fake()->randomDigit(),
-            'dateFrom'=>fake()->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null),
-            'dateTo'=>fake()->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null),
+            'dateFrom'=>fake()->dateTimeBetween($startDate = '-30 years', $endDate = 'now'),
+            'dateTo'=>fake()->dateTimeBetween($startDate = '-30 years', $endDate = 'now'),
         ];
     }
 }
